@@ -11,6 +11,10 @@ body {
 ul {
     list-style: none;
 }
+
+input {
+    padding: 4px;
+}
 /* UTILITY TAG */
 .flexer {
     display: flex;
@@ -176,5 +180,4 @@ img {
     width: 80%;
     border-radius: 6px;
     border: none;
-    padding: 4px;
 }

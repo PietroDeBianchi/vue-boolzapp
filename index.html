@@ -31,12 +31,12 @@
                     </div>
                 </section>
                 <section class="contactContainer">
-                    <div class="contactSearch flexer">
+                    <div class="contactSearch flexer" role="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" placeholder=" Search or start a new chat..." v-model="research" @keyup="researchFunction">
                     </div>
                     <ul id="contactList">
-                        <li v-for="(contact, index) in contacts" @click="selectContact(index)" class="flexer singleContact">
+                        <li v-for="(contact, index) in contacts" v-show="contact.visible" @click="selectContact(index)" class="flexer singleContact">
                           <img :src="contact.avatar" :alt="contact.name" />
                           <div class="contact-name">
                             <h4>{{ contact.name }}</h4>
