@@ -178,7 +178,7 @@ createApp({
     },
     researchFunction(){
       this.contacts.forEach((element) => {
-      if(element.name.includes(this.research)){
+      if(element.name.toLowerCase().includes(this.research.toLowerCase())){
         element.visible = true;
       } else {
         element.visible = false;

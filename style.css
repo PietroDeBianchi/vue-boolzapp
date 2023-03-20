@@ -55,6 +55,7 @@ aside {
     border-right: 1px solid #747374;
     background-color: white;
     border-radius: 12px 0 0 12px;
+    overflow-y: scroll;
 }
 
 .asideTop {
@@ -79,12 +80,6 @@ aside {
 .profileFunction i {
     padding: 0 6px;
 }
-
-#contactList {
-    flex-direction: column;
-    overflow-y: scroll;
-}
-
 .singleContact {
     gap: 4px;
     padding: 4px;
