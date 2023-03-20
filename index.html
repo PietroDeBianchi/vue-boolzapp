@@ -13,10 +13,65 @@
     <title>BoolZapp</title>
 </head>
 <body>
+    
+    <main class="flexer">
 
-    <div id="app">
+        <div id="app" class="flexer">
 
-    </div>
+            <aside>
+                <section class="asideTop topHead flexer">
+                    <div class="profile">
+                        <img src="img/guts.jpg" alt="Profile img">
+                        <h4>Deba</h4>
+                    </div>
+                    <div class="profileFunction">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
+                <section class="contactContainer">
+                    <div class="contactSearch flexer">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder=" Search or start a new chat...">
+                    </div>
+                    <ul id="contactList">
+                        <li v-for="(contact, index) in contacts" @click="selectContact(index)" class="flexer singleContact">
+                          <img :src="contact.avatar" :alt="contact.name" />
+                          <div class="contact-name">
+                            <h4>{{ contact.name }}</h4>
+                          </div>
+                        </li>
+                      </ul>
+                </section>
+
+            </aside>
+
+            <div id="mainChat">
+                <section class="chatTop topHead flexer">
+                    <div class="profile">
+                        <img :src="contacts[chatContanct].avatar" alt="Avatar img">
+                        <h4>{{ contacts[chatContanct].name }}</h4>
+                        <span>{{ contacts[chatContanct].messages.date }}</span>
+                    </div>
+                    <div class="profileFunction">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
+                <section class="currentchat"></section>
+                <section class="myText">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder=" Write a message...">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </section>
+
+            </div>            
+
+        </div>
+
+    </main>
     
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./main.js"></script>
