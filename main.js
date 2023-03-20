@@ -200,7 +200,7 @@ createApp({
           message: "ok",
           status: 'received'
         });
-      }, 1000);
+      }, 800);
     },
   }  
 }).mount('#app')
