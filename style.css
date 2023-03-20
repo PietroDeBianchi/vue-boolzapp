@@ -19,8 +19,11 @@ ul {
 
 .topHead {
     height: 60px;
-    background-color: #EAEAEA;
-    border: 1px solid black;
+    border-bottom: 1px solid #747374;
+}
+
+.background {
+    background-color: #E5DDD5;
 }
 
 /* MAIN STYLE */
@@ -36,6 +39,8 @@ main {
     width: 70%;
     margin: auto;
     background-color: #EAEAEA;
+    border: 1px solid #747374;
+    border-radius: 12px;
 }
 
 
@@ -43,11 +48,12 @@ main {
 aside {
     height: 100%;
     width: 30%;
-    border: 1px solid black;
+    border-right: 1px solid #747374;
 }
 
 .asideTop {
     align-items: center;
+    border-radius: 12px 0 0 0;
 }
 
 .profile {
@@ -96,32 +102,35 @@ img {
     width: 100%;
     padding: 8px 4px;
     background-color: #F3EEEA;
+    align-items: center;
 }
 
 .contactSearch input {
+    height: 26px;
     flex-grow: 2;
     border: 1px solid #E9EBEB;
     border-radius: 0 5px 5px 0;
 }
 
 .contactSearch i {
-    font-size: 16px;
+    height: 24px;
     padding: 4px;
     background-color: white;
-    border: 1px solid #E9EBEB;
     border-radius: 5px 0 0 5px;
 }
 /* MAIN CHAT STYLE */
 #mainChat {
     height: 100%;
     width: 70%;
-    border: 1px solid black;
     position: relative;
+}
+
+.chatTop {
+    border-radius: 0 12px 0 0;
 }
 
 .currentchat {
     height: calc(100% - 60px); /* Top-head height 60px*/
-    border: 1px solid black;
 }
 
 .myText {
@@ -133,11 +142,13 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
-    border: 1px solid black;
+    border-top: 1px solid #747374;
+    border-radius: 0 0 12px 0;
 }
 
 .myText input {
     height: 30px;
     width: 80%;
-    border: 1px solid #E9EBEB;
+    border-radius: 6px;
+    border: none;
 }

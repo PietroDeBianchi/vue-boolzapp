@@ -19,7 +19,7 @@
         <div id="app" class="flexer">
 
             <aside>
-                <section class="asideTop topHead flexer">
+                <section class="asideTop topHead flexer background">
                     <div class="profile">
                         <img src="img/guts.jpg" alt="Profile img">
                         <h4>Deba</h4>
@@ -48,7 +48,7 @@
             </aside>
 
             <div id="mainChat">
-                <section class="chatTop topHead flexer">
+                <section class="chatTop topHead flexer background">
                     <div class="profile">
                         <img :src="contacts[chatContanct].avatar" alt="Avatar img">
                         <h4>{{ contacts[chatContanct].name }}</h4>
@@ -61,10 +61,10 @@
                     </div>
                 </section>
                 <section class="currentchat"></section>
-                <section class="myText">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <section class="myText background">
+                    <i class="fa-solid fa-face-smile"></i>
                     <input type="text" placeholder=" Write a message...">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-microphone"></i>
                 </section>
 
             </div>            
