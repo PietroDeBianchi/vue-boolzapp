@@ -70,7 +70,7 @@
 
                 <section class="myText background">
                     <i class="fa-solid fa-face-smile"></i>
-                    <input type="text" placeholder=" Write a message...">
+                    <input type="text" placeholder=" Write a message..." v-model="newMessage" @keyup.enter="sendText">
                     <i class="fa-solid fa-microphone"></i>
                 </section>
 
