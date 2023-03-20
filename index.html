@@ -33,13 +33,14 @@
                 <section class="contactContainer">
                     <div class="contactSearch flexer">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder=" Search or start a new chat...">
+                        <input type="text" placeholder=" Search or start a new chat..." v-model="research" @keyup="researchFunction">
                     </div>
                     <ul id="contactList">
                         <li v-for="(contact, index) in contacts" @click="selectContact(index)" class="flexer singleContact">
                           <img :src="contact.avatar" :alt="contact.name" />
                           <div class="contact-name">
                             <h4>{{ contact.name }}</h4>
+                            <span></span>
                           </div>
                         </li>
                       </ul>
@@ -60,7 +61,13 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </section>
-                <section class="currentchat"></section>
+
+                <section class="currentchat">
+                    <div v-for="(contact, index) in contacts[chatContanct].messages" class="chatting" :class="contact.status">
+                        {{contact.message}}
+                    </div>
+                </section>
+
                 <section class="myText background">
                     <i class="fa-solid fa-face-smile"></i>
                     <input type="text" placeholder=" Write a message...">

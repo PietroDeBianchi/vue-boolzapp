@@ -76,15 +76,16 @@ aside {
 
 #contactList {
     flex-direction: column;
-    padding: 8px 4px;
-}
-
-#contactList .singleContact {
-    margin: 4px 0;
+    overflow-y: scroll;
 }
 
 .singleContact {
     gap: 4px;
+    padding: 4px;
+}
+
+.singleContact:hover {
+    background-color: #E5DDD5;
 }
 
 img {
@@ -131,6 +132,26 @@ img {
 
 .currentchat {
     height: calc(100% - 60px); /* Top-head height 60px*/
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatting {
+    padding: 4px 8px;
+    margin: 8px;
+    border-radius: 8px;
+    min-width: 40%;
+}
+
+.received{
+    background-color: white;
+    align-self: flex-start;
+}
+ 
+.sent{
+    background-color: #D5F9BA;
+    align-self: flex-end;
 }
 
 .myText {

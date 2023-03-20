@@ -4,7 +4,8 @@ createApp({
   data() {
     return {
       chatContanct: 0,
-      newMessage: [],
+      research: null,
+      newMessage: "",
       contacts: [
         {
           name: 'Michele',
@@ -174,8 +175,33 @@ createApp({
   methods: {
     selectContact(index) {
       this.chatContanct = index;
-    }
-  }
-}).mount('#app');
-
+    },
+    researchFunction(){
+      this.contacts.forEach((element) => {
+      if(element.name.includes(this.research)){
+        element.visible = true;
+      } else {
+        element.visible = false;
+      }
+    })},
+    sendText(){
+      this.contacts[this.chatContanct].messages.push({
+        date: '12:00',
+        message: this.newMessage,
+        status: 'sent'
+      });
+      this.newMessage = "";
+      this.autoAnswer();
+    },
+     autoAnswer(){
+      setTimeout(() => {
+        this.contacts[this.chatContanct].messages.push({
+          date: '12:00',
+          message: "ok",
+          status: 'received'
+        });
+      }, 1000);
+    },
+  }  
+}).mount('#app')
 
