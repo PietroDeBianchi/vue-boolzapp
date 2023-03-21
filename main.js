@@ -202,6 +202,9 @@ createApp({
         });
       }, 800);
     },
+    removeChat(index) {
+      this.contacts[chatContanct].messages.splice(index, 1)
+    },
   }  
 }).mount('#app')
 

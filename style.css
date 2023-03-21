@@ -174,11 +174,23 @@ img {
     flex-direction: column;
 }
 
+.messageBan {
+    z-index: 999;
+    position: absolute;
+    background-color: white;
+    padding: 6px;
+    border: 1px solid #747374;
+    border-radius: 6px;
+    right: 0;
+    top: 24px;
+}
+
 .chatting {
     padding: 4px 12px;
     margin: 8px;
     border-radius: 8px;
     min-width: 40%;
+    position: relative;
 }
 
 .received{
