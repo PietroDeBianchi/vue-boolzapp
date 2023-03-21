@@ -65,9 +65,9 @@
                 </section>
 
                 <section class="currentchat">
-                    <div v-for="(contact, index) in contacts[chatContanct].messages" class="chatting" :class="contact.status">
+                    <div v-for="(contact, index) in contacts[chatContanct].messages" class="chatting" :class="contact.status" @click="showByClick">
                         {{contact.message}}
-                        <div class="messageBan">
+                        <div class="messageBan" v-show="show">
                             <p>Message Info</p>
                             <p @click="removeChat(index)">Delete Message</p>
                         </div>

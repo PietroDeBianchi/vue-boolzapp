@@ -4,7 +4,8 @@ createApp({
   data() {
     return {
       chatContanct: 0,
-      research: null,
+      research: "",
+      show: false,
       newMessage: "",
       contacts: [
         {
@@ -203,8 +204,15 @@ createApp({
       }, 800);
     },
     removeChat(index) {
-      this.contacts[chatContanct].messages.splice(index, 1)
+      this.contacts[this.chatContanct].messages.splice(index, 1)
     },
+    showByClick(){
+      if(!this.show) {
+        this.show = true;
+      } else {
+        this.show = false;
+      }
+    }
   }  
 }).mount('#app')
 
