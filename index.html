@@ -40,7 +40,7 @@
                           <img :src="contact.avatar" :alt="contact.name" />
                           <div class="contact-name">
                             <h4>{{ contact.name }}</h4>
-                            <span></span>
+                            <span>{{contacts[chatContanct].messages[contacts[chatContanct].messages.length - 1].date}}</span>
                           </div>
                         </li>
                     </ul>
@@ -52,8 +52,10 @@
                 <section class="chatTop topHead flexer background">
                     <div class="profile">
                         <img :src="contacts[chatContanct].avatar" alt="Avatar img">
-                        <h4>{{ contacts[chatContanct].name }}</h4>
-                        <span>{{ contacts[chatContanct].messages.date }}</span>
+                        <div>
+                            <h4>{{ contacts[chatContanct].name }}</h4>
+                            <p>{{contacts[chatContanct].messages[contacts[chatContanct].messages.length - 1].date}}</p>
+                        </div>
                     </div>
                     <div class="profileFunction">
                         <i class="fa-solid fa-magnifying-glass"></i>
