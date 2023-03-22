@@ -65,9 +65,9 @@
                 </section>
 
                 <section class="currentchat">
-                    <div v-for="(contact, index) in contacts[chatContanct].messages" class="chatting" :class="contact.status" @click="showByClick">
+                    <div v-for="(contact, index) in contacts[chatContanct].messages" class="chatting" :class="contact.status" @click="openDropdown(index)">
                         {{contact.message}}
-                        <div class="messageBan" v-show="show">
+                        <div class="messageBan" v-if="!this.contacts[this.chatContanct].messages[index].dropdown">
                             <p>Message Info</p>
                             <p @click="removeChat(index)">Delete Message</p>
                         </div>
