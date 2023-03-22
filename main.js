@@ -209,7 +209,8 @@ createApp({
       this.contacts[this.chatContanct].messages.push({
         date: '12:00',
         message: this.newMessage,
-        status: 'sent'
+        status: 'sent',
+        dropdown: 'false'
       });
       this.newMessage = "";
       this.autoAnswer();
@@ -219,16 +220,22 @@ createApp({
         this.contacts[this.chatContanct].messages.push({
           date: '12:00',
           message: "ok",
-          status: 'received'
+          status: 'received',
+          dropdown: 'false'
         });
       }, 800);
     },
     removeChat(index) {
+      if(this.contacts[this.chatContanct].messages.length == 1){
+      this.contacts[this.chatContanct].messages.pop()
+    } else {
       this.contacts[this.chatContanct].messages.splice(index, 1)
+    }
     },
     openDropdown(index) {
       this.contacts[this.chatContanct].messages[index].dropdown = !this.contacts[this.chatContanct].messages[index].dropdown
     },
   }
 }).mount('#app')
+
 
