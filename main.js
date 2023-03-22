@@ -226,13 +226,6 @@ createApp({
     removeChat(index) {
       this.contacts[this.chatContanct].messages.splice(index, 1)
     },
-    // openDropdown(index){
-    //   if(!this.contacts[this.activeChat].messages[index].dropdown) {
-    //     this.contacts[this.activeChat].messages[index].dropdown = true;
-    //   } else {
-    //     this.contacts[this.activeChat].messages[index].dropdown = false;
-    //   }
-    // },
     openDropdown(index) {
       this.contacts[this.chatContanct].messages[index].dropdown = !this.contacts[this.chatContanct].messages[index].dropdown
     },
